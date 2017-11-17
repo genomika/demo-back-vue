@@ -99,3 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+bank/.DS_Store
+bank/account/.DS_Store
+bank/bank/.DS_Store
