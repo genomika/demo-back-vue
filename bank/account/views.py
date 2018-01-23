@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from rest_framework import generics
 from rest_framework.permissions import IsAdminUser
+from rest_framework_jwt.authentication import BaseJSONWebTokenAuthentication
 
 from .models import Profile, BankAccount
 from .serializers import ProfileSerializer, BankAccountSerializer
@@ -37,3 +38,5 @@ class BankAccountRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIV
     serializer_class = BankAccountSerializer
     permission_classes = (IsUserAccountOwner,)
     lookup_field = 'account_number'
+
+
